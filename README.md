@@ -19,7 +19,8 @@ Personal portfolio website for Ivan Lee Dorillo, featuring an introduction, skil
 |           |-- horizon-download.png
 |           |-- secret-wall.png
 |           |-- php-learning-journey.png
-|           `-- research-vault.png
+|           |-- research-vault.png
+|           `-- corner-cravings.png
 `-- .gitignore
 ```
 
