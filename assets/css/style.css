@@ -379,6 +379,16 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
+.contact-details a {
+    color: var(--text-muted);
+    text-underline-offset: 3px;
+}
+
+.contact-details a:hover,
+.contact-details a:focus-visible {
+    color: var(--text-color);
+}
+
 .social-links {
     margin-top: 2rem;
     display: flex;
@@ -474,6 +484,9 @@ h1, h2, h3, h4 {
 .hamburger {
     display: none;
     cursor: pointer;
+    padding: 0;
+    border: 0;
+    background: transparent;
 }
 
 .bar {

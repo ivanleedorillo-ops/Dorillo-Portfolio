@@ -17,12 +17,13 @@
 <body>
     <nav class="navbar">
         <div class="logo">ILD.</div>
-        <div class="hamburger">
+        <button class="hamburger" type="button" aria-label="Open navigation" aria-controls="primary-navigation"
+            aria-expanded="false">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </div>
-        <ul class="nav-links">
+        </button>
+        <ul class="nav-links" id="primary-navigation">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -35,11 +36,12 @@
             <div class="hero-content">
                 <p class="subtitle">PORTFOLIO</p>
                 <h1 class="title">Ivan Lee Dorillo</h1>
-                <p class="description">Crafting a awesome digital experiences with precision and quality.</p>
+                <p class="description">Crafting thoughtful digital experiences with precision and quality.</p>
                 <a href="#projects" class="btn-primary">VIEW WORK</a>
             </div>
             <div class="hero-image">
-                <img src="assets/images/profile/ivan-dorillo-portrait.png" alt="Ivan Lee Dorillo">
+                <img src="assets/images/profile/ivan-dorillo-portrait.webp" alt="Portrait of Ivan Lee Dorillo"
+                    width="1122" height="1402" fetchpriority="high" decoding="async">
             </div>
         </div>
     </header>
@@ -78,55 +80,64 @@
             <div class="project-grid">
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/craigslist-redesign.png" alt="Ohana Business System">
+                        <img src="assets/images/projects/craigslist-redesign.webp" alt="Craigslist redesign preview"
+                            width="1795" height="706" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>Craigslist Redesign</h3>
                         <p>A case study where I redesigned the Craigslist website to give it a more modern look and a
                             better user experience.</p>
-                        <a href="http://ohana-biz.infinityfreeapp.com/login.php" target="_blank"
+                        <a href="https://ohana-biz.infinityfreeapp.com/login.php" target="_blank"
+                            rel="noopener noreferrer"
                             class="btn-secondary">Visit Site</a>
                     </div>
                 </article>
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/horizon-download.png" alt="HorizonDownload">
+                        <img src="assets/images/projects/horizon-download.webp" alt="HorizonDownload website preview"
+                            width="1899" height="910" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
-                        <h3>HorizonDowload</h3>
-                        <p>A web-based media downloader supporting YouTube, TikTok, and Facebook. Im gonna add some
-                            feature in the future</p>
+                        <h3>HorizonDownload</h3>
+                        <p>A web-based media downloader supporting YouTube, TikTok, and Facebook, with more features
+                            planned for future releases.</p>
                         <a href="https://github.com/ivanleedorillo-ops/HorizonDownload" target="_blank"
+                            rel="noopener noreferrer"
                             class="btn-secondary">View Project on GitHub</a>
                     </div>
                 </article>
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/secret-wall.png" alt="Jeepney Tracker App Design">
+                        <img src="assets/images/projects/secret-wall.webp" alt="SecretWall website preview" width="1919"
+                            height="613" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>SecretWall</h3>
-                        <p> SecretWall — a platform where users can share messages, thoughts, and confessions in a
+                        <p>SecretWall is a platform where users can share messages, thoughts, and confessions in a
                             simple and engaging way.</p>
-                        <a href="https://secretwall.xo.je/" target="_blank" class="btn-secondary">View Site</a>
+                        <a href="https://secretwall.xo.je/" target="_blank" rel="noopener noreferrer"
+                            class="btn-secondary">View Site</a>
                     </div>
                 </article>
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/php-learning-journey.png" alt="PHP Learning Journey">
+                        <img src="assets/images/projects/php-learning-journey.webp" alt="PHP Learning Journey preview"
+                            width="1897" height="898" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>PHP Learning Journey</h3>
-                        <p> A collection of PHP scripts that cover fundamental concepts, best practices, and practical
+                        <p>A collection of PHP scripts that covers fundamental concepts, best practices, and practical
                             applications of the language. Each script is documented with clear explanations and
                             examples.</p>
                         <a href="https://github.com/ivanleedorillo-ops/PHP-Learning-Journey" target="_blank"
+                            rel="noopener noreferrer"
                             class="btn-secondary">View Project on GitHub</a>
                     </div>
                 </article>
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/research-vault.png" alt="ResearchVault dashboard">
+                        <img src="assets/images/projects/research-vault.webp" alt="ResearchVault dashboard" width="1897"
+                            height="907" loading="lazy" decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>ResearchVault</h3>
@@ -135,6 +146,7 @@
                             allowing librarians to securely manage approved research while students can browse, search,
                             and access studies.</p>
                         <a href="https://github.com/ivanleedorillo-ops/ResearchVault" target="_blank"
+                            rel="noopener noreferrer"
                             class="btn-secondary">View Project on GitHub</a>
                     </div>
                 </article>
@@ -148,8 +160,9 @@
             <div class="project-grid contributed-project-grid">
                 <article class="project-card contributed-project-card">
                     <div class="project-image">
-                        <img src="assets/images/projects/corner-cravings.png"
-                            alt="Corner Cravings restaurant website homepage">
+                        <img src="assets/images/projects/corner-cravings.webp"
+                            alt="Corner Cravings restaurant website homepage" width="1897" height="912" loading="lazy"
+                            decoding="async">
                     </div>
                     <div class="project-info">
                         <h3>Corner Cravings</h3>
@@ -171,19 +184,22 @@
                     <p class="contact-desc">I am currently available for new opportunities and collaborations. Feel free
                         to reach out.</p>
                     <div class="contact-details">
-                        <p><strong>Phone Number:</strong> 09614625860</p>
-                        <p><strong>Email:</strong> ivanleedorillo@gmail.com</p>
+                        <p><strong>Phone:</strong> <a href="tel:+639614625860">0961 462 5860</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:ivanleedorillo@gmail.com">ivanleedorillo@gmail.com</a>
+                        </p>
                         <p><strong>Address:</strong> Purok 4, Licida, Bustos, Bulacan</p>
                     </div>
                     <div class="social-links">
-                        <a href="https://web.facebook.com/ivanlee.dorillo" target="_blank" aria-label="Facebook">
+                        <a href="https://web.facebook.com/ivanlee.dorillo" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook">
                             <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.597 1.323-1.324V1.325C24 .597 23.403 0 22.675 0z" />
                             </svg>
                             <span>Facebook</span>
                         </a>
-                        <a href="https://github.com/ivanleedorillo-ops" target="_blank" aria-label="GitHub">
+                        <a href="https://github.com/ivanleedorillo-ops" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
                             <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -191,7 +207,7 @@
                             <span>GitHub</span>
                         </a>
                         <a href="https://www.linkedin.com/in/ivan-lee-dorillo-0585aa426" target="_blank"
-                            aria-label="LinkedIn">
+                            rel="noopener noreferrer" aria-label="LinkedIn">
                             <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -232,14 +248,25 @@
         const navLinks = document.querySelector(".nav-links");
 
         hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navLinks.classList.toggle("active");
+            const isOpen = hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active", isOpen);
+            hamburger.setAttribute("aria-expanded", String(isOpen));
+            hamburger.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
         });
 
         document.querySelectorAll(".nav-links a").forEach(n => n.addEventListener("click", () => {
             hamburger.classList.remove("active");
             navLinks.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", "false");
+            hamburger.setAttribute("aria-label", "Open navigation");
         }));
+
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape" && navLinks.classList.contains("active")) {
+                hamburger.click();
+                hamburger.focus();
+            }
+        });
     </script>
 </body>
 
