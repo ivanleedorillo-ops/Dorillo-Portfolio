@@ -12,23 +12,47 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo">ILD.</div>
-        <button class="hamburger" type="button" aria-label="Open navigation" aria-controls="primary-navigation"
-            aria-expanded="false">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
         <ul class="nav-links" id="primary-navigation">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+                <!-- Sun icon (shown in dark mode) -->
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <path
+                        d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+                <!-- Moon icon (shown in light mode) -->
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button class="hamburger" type="button" aria-label="Open navigation" aria-controls="primary-navigation"
+                aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
     </nav>
 
     <header id="home" class="hero">
@@ -88,8 +112,7 @@
                         <p>A case study where I redesigned the Craigslist website to give it a more modern look and a
                             better user experience.</p>
                         <a href="https://ohana-biz.infinityfreeapp.com/login.php" target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn-secondary">Visit Site</a>
+                            rel="noopener noreferrer" class="btn-secondary">Visit Site</a>
                     </div>
                 </article>
                 <article class="project-card">
@@ -102,8 +125,7 @@
                         <p>A web-based media downloader supporting YouTube, TikTok, and Facebook, with more features
                             planned for future releases.</p>
                         <a href="https://github.com/ivanleedorillo-ops/HorizonDownload" target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn-secondary">View Project on GitHub</a>
+                            rel="noopener noreferrer" class="btn-secondary">View Project on GitHub</a>
                     </div>
                 </article>
                 <article class="project-card">
@@ -130,8 +152,7 @@
                             applications of the language. Each script is documented with clear explanations and
                             examples.</p>
                         <a href="https://github.com/ivanleedorillo-ops/PHP-Learning-Journey" target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn-secondary">View Project on GitHub</a>
+                            rel="noopener noreferrer" class="btn-secondary">View Project on GitHub</a>
                     </div>
                 </article>
                 <article class="project-card">
@@ -146,8 +167,7 @@
                             allowing librarians to securely manage approved research while students can browse, search,
                             and access studies.</p>
                         <a href="https://github.com/ivanleedorillo-ops/ResearchVault" target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn-secondary">View Project on GitHub</a>
+                            rel="noopener noreferrer" class="btn-secondary">View Project on GitHub</a>
                     </div>
                 </article>
 
@@ -185,7 +205,8 @@
                         to reach out.</p>
                     <div class="contact-details">
                         <p><strong>Phone:</strong> <a href="tel:+639614625860">0961 462 5860</a></p>
-                        <p><strong>Email:</strong> <a href="mailto:ivanleedorillo@gmail.com">ivanleedorillo@gmail.com</a>
+                        <p><strong>Email:</strong> <a
+                                href="mailto:ivanleedorillo@gmail.com">ivanleedorillo@gmail.com</a>
                         </p>
                         <p><strong>Address:</strong> Purok 4, Licida, Bustos, Bulacan</p>
                     </div>
@@ -265,6 +286,23 @@
             if (event.key === "Escape" && navLinks.classList.contains("active")) {
                 hamburger.click();
                 hamburger.focus();
+            }
+        });
+
+        // Theme toggle logic
+        const themeToggleBtn = document.getElementById("theme-toggle");
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener("click", () => {
+                const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+                const nextTheme = currentTheme === "dark" ? "light" : "dark";
+                document.documentElement.setAttribute("data-theme", nextTheme);
+                localStorage.setItem("theme", nextTheme);
+            });
+        }
+
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+            if (!localStorage.getItem("theme")) {
+                document.documentElement.setAttribute("data-theme", e.matches ? "dark" : "light");
             }
         });
     </script>
